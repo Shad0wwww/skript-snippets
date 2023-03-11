@@ -1,0 +1,40 @@
+{
+  "name": "skript-snippets",
+  "displayName": "Skript-snippets",
+  "description": "Skript snippets",
+  "author": "Shad0wsense",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters"
+  ],
+  "publisher": "Shad0wsense",
+  "keywords": [
+    "skript",
+    "intelliskript",
+    "intellisense"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "skript",
+        "aliases": [
+          "Skript",
+          "sk"
+        ],
+        "extensions": [
+          ".sk"
+        ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "skript",
+        "path": "./snippets/skript.json"
+      }
+    ]
+  }
+}

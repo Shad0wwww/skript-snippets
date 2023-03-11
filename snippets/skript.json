@@ -1,0 +1,47 @@
+{
+    "command": {
+        "prefix": "command",
+        "body": [
+            "command /hejsa:",
+            "\tpermission: *",
+            "\tpermission message: Ingen adgang.",
+            "\taliases: hej",
+            "\ttrigger: hej",
+            "\t\tsend \"hej\" to player"
+        ],
+        "description": "template to a command"
+    },
+    "function": {
+        "prefix": "function",
+        "body": [
+            "function Hejsa(p: player, s: string):",
+            "\tsend \"%{_s}%\" to {_p}"
+        ],
+        "description": "template to a function"
+    },
+    "vanilla-gui": {
+        "prefix": "vanilla-gui",
+        "body": [
+            "command /openinv:",
+            "\tpermission: *",
+            "\tpermission message: Ingen adgang.",
+            "\taliases: inv",
+            "\ttrigger: inv",   
+            "\t\tset {_inv} to chest inventory with 5 rows named \"<a name here>\" ",
+            "\t\tset slot 0 of {_inv} to emerald named \"<item-name here>\" with lore \"<lore-name here>\" ",
+            "\t\topen {_inv} to player ",
+            "",
+            "#The inventory click event",
+            "#event-world, event-slot, event-inventory, event-itemstack, event-itemtype, event-player, event-string, event-inventoryaction, event-clicktype",
+            "",
+            "on inventory click:",
+            "\tname of event-inventory = \"<a name here>\":  ",
+            "\t\tcancel event",
+            "\t\tindex of event-slot = 0:",
+            "\t\t\tsend \"Du klikked på slot 0\" to player",
+            "\t\t\tclose player's inventory"
+        ],
+        "description": "template to a vanilla-gui"
+    }    
+}
+
